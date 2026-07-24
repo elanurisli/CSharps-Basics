@@ -1,100 +1,94 @@
-﻿//DEĞİŞKENLER
+﻿/*
 
-var kdvOrani = 1.18;
-var ürünA = 5000;
-var ürünB = 6000;
-var ürünC = 7000;
-var ürünD = 5500;  
+C# VERİ TİPLERİ
 
-Console.WriteLine(ürünA*kdvOrani);           //ürünA 
-Console.WriteLine(ürünB*kdvOrani);          //ürünB
-Console.WriteLine(ürünC*kdvOrani);         //ürünC 
-Console.WriteLine(ürünD*kdvOrani);        //ürünD  
+Value Types (Değer Tipleri); 
 
+-> Value types'lar stack'te tutulur ve referans tiplerine göre daha hızlıdır.
 
-//var sayi = 20;
-//var urunAdi ="Samsung S23";
+Tam sayılar: (int, long, short, byte)
+Ondalıklı sayılar: (float, double, decimal)
+Diğer veri tipleri: (boolean, char, struct)
 
+Reference Types (Referans Tipleri);
+string, class, interface, array
 
-var urun_adi = "Samsung S23";
+*/
+{
 
-//BOŞLUK İÇERMEZ DEĞİŞKEN ADLARI
-// DEĞİŞKEN ADLARI SAYI İLE BAŞLAYAMAZ
-var sayi2 = 30;
-var sayi3 = 50;
+int sayi = 200; 
+decimal kdvOrani = 1.18m;          //m = decimal yazılırken belirtilmelidir. 
+char karakter = 'A';
+bool satistaMi = true;
+string urunAdi = "Samsung S23";
+float fiyat = 1000.25f;          //f = float yazılırken belirtilmelidir. 
+double fiyat2 = 1000.25d;     
 
-var fiyat = 1000.25;
-var Fiyat = 1000.25;
-
-//BÜYÜK-KÜÇÜK HARF DUYARLILIĞI VARDIR.(CAMELCASE)
-
-var satistaMi = true;
-var ogrenciNo = 1234;
-
-//Console.WritLine(sayi);
-Console.WriteLine(urun_adi);
-Console.WriteLine(sayi2);
-Console.WriteLine(sayi3);
+Console.WriteLine(sayi);
+Console.WriteLine(kdvOrani);
+Console.WriteLine(karakter);
+Console.WriteLine(satistaMi);
+Console.WriteLine(urunAdi);
 Console.WriteLine(fiyat);
-System.Console.WriteLine(Fiyat);
-System.Console.WriteLine(satistaMi);
-System.Console.WriteLine(ogrenciNo); 
+Console.WriteLine(fiyat2);
 
-
-
+}
 /* 
 
-  Uygulama1 : Bir öğrencinin aşağadaki bilgileri için gerekli değişkenleri oluşturunuz.
+    VERİ TİPİ DÖNÜŞÜMÜNE NEDEN İHTİYAÇ DUYARIZ?
 
-  öğrenci adı
-  öğrenci soyadı 
-  öğrenci ad ve soyad 
-  öğrenci numarası 
-  öğrenci cinsiyet 
-  öğrenci tc kimlik 
-  öğrenci doğum yılı 
-  öğrenci adres bilgileri 
-  öprenci yaşı
+*/
+{
+  Console.Write("1.sayi: ");         //WriteLine() metodu ile ekrana yazdırma işlemi yapılır ve imleç bir alt satıra geçer.
+  var sayi1 = Console.ReadLine();   //ReadLine() metodu string veri tipinde değer döndürür.
 
+Console.Write("2.sayi: ");         //Write() metodu ile ekrana yazdırma işlemi yapılır ve imleç aynı satırda kalır.
+  var sayi2 = Console.ReadLine();
+  var toplam = sayi1 + sayi2;
+Console.WriteLine(toplam);
+}
+/* 
+ 1.sayi: 10, 2.sayi: 20 bu şekilde ekrana yazdırıldığında toplam = 1020 olarak ekrana yazdırılır. 
+ Çünkü sayi1 ve sayi2 string (readline) veri tipinde olduğu için toplama işlemi yerine birleştirme işlemi yapılır. 
+*/
 
+/*
+  VERİ TİPİ DÖNÜŞÜMÜ
+  --> implicit casting (bilinçsiz dönüşüm) : küçük veri tipinden büyük veri tipine dönüşüm bilinçsiz bir şekilde yapılır.Bu dönüşümde veri kaybı yaşanmaz.
+  --> explicit conversion (bilinçli dönüşüm) : büyük veri tipinden küçük veri tipine dönüşüm bilinçli bir şekilde yapılır.Bu dönüşümde veri kaybı yaşanabilir.
+*/
+{
+  int a = 10;
+  double b = a; // implicit casting (bilinçsiz dönüşüm) //Bu dönüşümde küçük kaptan büyük kaba dökme yaşanır ve veri kaybı yaşanmaz. Bu nedenle bilinçsiz bir şekilde dönüşüm yapılır.
 
-  Uygulama2 : Aşağıdaki ürünlerin toplam bilgisini hesaplayınız.
+  double c = 11.2;
+  int d = (int)c; // explicit conversion (bilinçli dönüşüm) //Bu dönüşümde büyük kaptan küçük kaba dökme yaşanır ve veri kaybı yaşanabilir. Bu nedenle bilinçli bir şekilde dönüşüm yapılır.
+    
+    Console.WriteLine(b);
+    Console.WriteLine(d);
+}
 
-  ürün 1 = 50 tl 
-  ürün 2 = 60.5 tl 
-  ürün 3 = 356.45 tl  
+{
+Console.Write("1.sayi: "); 
+var sayi1 = Convert.ToInt32(Console.ReadLine());  
+//Convert.ToInt32() metodu ile string veri tipi int veri tipine dönüştürülür.
 
+Console.Write("2.sayi: ");  
+var sayi2 = Convert.ToInt32(Console.ReadLine());  
 
-  */
-
-  var ogrenciAdi = "Elanur ";
-  var ogrenciSoyadi = "İşli";
-  var adSoyad = ogrenciAdi + ogrenciSoyadi ;
-  var ogrenciNo ="12";
-  var ogrenciTc = "12121212121";
-  var ogrenciDogumYili = 2006;
-  var ogrenciAdresBilgisi ="İstanbul/Sultanbeyli";
-  var ogrenciYasi = 2026 - ogrenciDogumYili;
-  
-
-  System.Console.WriteLine(ogrenciAdi);
-  System.Console.WriteLine(ogrenciSoyadi);
-  System.Console.WriteLine(adSoyad);
-  System.Console.WriteLine(ogrenciNo);
-  System.Console.WriteLine(ogrenciTc );
-  System.Console.WriteLine(ogrenciDogumYili);
-  System.Console.WriteLine(ogrenciAdresBilgisi);
-  System.Console.WriteLine(ogrenciYasi);
-
-  var ürün1 = 50 ;
-  var ürün2 = 60.5;
-  var ürün3 = 365.45 ;
-  var toplam =ürün1 + ürün2 + ürün3;
-  System.Console.WriteLine(toplam);
-  
-  
-
-
- 
-
-  
+var toplam = sayi1 + sayi2;
+Console.WriteLine(toplam);
+//1.sayi: 10, 2.sayi: 20 bu şekilde ekrana yazdırıldığında toplam = 30 olarak ekrana yazdırılır.
+}
+/*
+NULLABLE TYPES (NULL DEĞER ALABİLEN VERİ TİPLERİ);
+--> Mutlaka değer alması gereken veri tipleri null değer alamaz. Örneğin int veri tipi null değer alamaz. 
+Ancak int? veri tipi null değer alabilir. Bu nedenle nullable types kullanılır.
+--> Hasvalue ve GetValue metotları nullable types ile birlikte kullanılır.
+Eğer değişken null değer almışsa HasValue metodu false döner. Eğer değişken null değer almamışsa HasValue metodu true döner.
+*/
+{
+  int? sayi = null; //int? veri tipi null değer alabilir.
+  Console.WriteLine(sayi);
+  Console.WriteLine(sayi.HasValue);
+}
