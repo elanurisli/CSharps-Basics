@@ -5,7 +5,7 @@ Bu depoda, katıldığım C# eğitim serisinde adım adım ilerlerken yazdığı
 ## 📌 Kurs Müfredatı ve İlerleme Durumu
 
 - [x] **01. Değişkenler** *(Tamamlandı)*
-- [ ] **02. Veri Tipleri**
+- [x] **02. Veri Tipleri**
 - [ ] **03. Dizeler (Strings) ve Tarih İşlemleri**
 - [ ] **04. Diziler (Arrays)**
 - [ ] **05. Operatörler**
