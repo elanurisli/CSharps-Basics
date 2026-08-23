@@ -60,7 +60,7 @@ namespace CSharpNotlarim
                öğrenci doğum yılı 
                öğrenci adres bilgileri 
                öğrenci yaşı
-
+            
 
                Uygulama2 : Aşağıdaki ürünlerin toplam bilgisini hesaplayınız.
 
