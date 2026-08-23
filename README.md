@@ -6,7 +6,7 @@ Bu depoda, katıldığım C# eğitim serisinde adım adım ilerlerken yazdığı
 
 - [x] 01. Değişkenler
 - [x] 02. Veri Tipleri
-- [ ] 03. Dizeler (Strings) ve Tarih İşlemleri
+- [x] 03. Dizeler (Strings) ve Tarih İşlemleri
 - [ ] 04. Diziler (Arrays)
 - [ ] 05. Operatörler
 - [ ] 06. Koşullu Bloklar (Karar Yapıları)
