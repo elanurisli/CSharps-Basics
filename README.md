@@ -8,7 +8,7 @@ Bu depoda, katıldığım C# eğitim serisinde adım adım ilerlerken yazdığı
 - [x] 02. Veri Tipleri
 - [x] 03. Dizeler (Strings) ve Tarih İşlemleri
 - [x] 04. Diziler (Arrays)
-- [ ] 05. Operatörler
+- [x] 05. Operatörler
 - [ ] 06. Koşullu Bloklar (Karar Yapıları)
 - [ ] 07. Döngüler
 - [ ] 08. Dosya Yönetimi
